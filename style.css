@@ -1,0 +1,241 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 
+	'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+	'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.heading {
+	position: absolute;
+	text-align: center;
+	top: 30%;
+	width: 100%;
+}
+.heading h1 {
+	color: limegreen;
+	font-size: 70px;
+}
+.heading h3 {
+	color: wheat;
+	font-size: 20px;
+}
+#particles-js {
+	background: black;
+	height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.944); /* Semi-transparent background */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other content */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+	border-bottom:2px solid limegreen
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar-item {
+    margin: 0 15px;
+}
+
+.navbar-item a {
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-item a:hover {
+    color: limegreen; /* Change color on hover */
+}
+
+/* About Section styles */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 200px;
+}
+
+.about-text h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+	color:limegreen
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-images {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+	padding-top:60px;
+}
+
+.image-circle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.image-circle img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-circle img:hover {
+    transform: scale(1.4);
+}
+
+        /* Projects Section styles */
+        .projects-section {
+            padding: 50px 0;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .projects-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 50px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .project img {
+            width: 40%;
+            object-fit: cover;
+            height: auto;
+        }
+
+        .project-info {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .project-info h3 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .project-info p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .project-info a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 20px;
+            background-color: rgb(4, 81, 4);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .project-info a:hover {
+            background-color: #45a049;
+        }
+
+		        /* Contact Section styles */
+				.contact-section {
+					padding: 50px 0;
+					background-color: #000000;
+					color: #ffffff;
+				}
+		
+				.contact-content {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					width: 80%;
+					max-width: 1200px;
+					margin: auto;
+				}
+		
+				.contact-title {
+					font-size: 48px;
+					font-weight: bold;
+					margin-bottom: 20px;
+					color: limegreen;
+				}
+		
+				.contact-form {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					max-width: 600px;
+				}
+		
+				.contact-form input,
+				.contact-form textarea {
+					padding: 10px;
+					margin-bottom: 20px;
+					border: none;
+					border-radius: 5px;
+					font-size: 16px;
+					background-color: #121212;
+					color:white
+				}
+		
+				.contact-form input[type="submit"] {
+					background-color: rgb(4, 81, 4);
+					color: white;
+					cursor: pointer;
+					transition: background-color 0.3s;
+				}
+		
+				.contact-form input[type="submit"]:hover {
+					background-color: #45a049;
+				}
