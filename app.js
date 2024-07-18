@@ -128,6 +128,7 @@ particlesJS('particles-js',
       "background_repeat": "no-repeat",
       "background_size": "cover"
     }
+
   }
 
 );
