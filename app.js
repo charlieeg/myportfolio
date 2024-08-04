@@ -132,3 +132,35 @@ particlesJS('particles-js',
   }
 
 );
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Select all projects
+  const projects = document.querySelectorAll('.project');
+
+  // Initialize observer
+  const observerOptions = {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px',
+      threshold: 0.1 // Trigger when 10% of the project is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+              // Determine which animation to use based on the index
+              const animationClass = index % 2 === 0 ? 'slideInFromLeft' : 'slideInFromRight';
+              
+              // Add animation class to the project
+              entry.target.style.animation = `${animationClass} 0.8s ease-out forwards`;
+              
+              // Stop observing the entry once it has animated
+              observer.unobserve(entry.target);
+          }
+      });
+  }, observerOptions);
+
+  // Observe each project
+  projects.forEach(project => {
+      observer.observe(project);
+  });
+});
