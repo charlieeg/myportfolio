@@ -166,7 +166,7 @@
     <div id="particles-js">
         <div class="heading">
             <h1>Hi, my name is Charlie.</h1>
-            <h3>I am a full-stack developer - welcome to my personal portfolio!</h3>
+            <h3>I am a front-end developer - welcome to my personal portfolio!</h3>
         </div>
     </div>
 
@@ -184,7 +184,7 @@
 <!-- About Section -->
 <section class="about-section" id="about">
     <div class="about-content">
-        <div class="about-text">
+        <div class="about-text slide-in-right">
             <h2>About</h2>
             <p>
                 Lifelong learner and full-stack developer with a passion for JavaScript, React, and all things web development.
@@ -194,7 +194,7 @@
             </p>
         </div>
         <div class="about-images">
-            <div class="image-circle">
+            <div class="image-circle slide-in-left">
                 <img src="images/HTML_Logo.png" alt="HTML">
                 <img src="images/CSS_Logo.png" alt="CSS">
                 <img src="images/js_logo.png" alt="Javascript">
@@ -218,8 +218,8 @@
             padding-left:153px;"">Projects</h2>
         <div class="projects-content">
             <div class="project">
-                <img class="project-photo" src="images/pixel-art-project.png" alt="Project 2">
-                <div class="project-info">
+                <img class="project-photo slide-in-right" src="images/pixel-art-project.png" alt="Project 2">
+                <div class="project-info slide-in-left">
                     <h3>Pixel-Sketch</h3>
                     <p>A dynamic web app for creating pixel art with customizable grids, color selection, rainbow effects, and shading tools for creative designs.</p>
                     <div class="programs-used">
@@ -233,8 +233,8 @@
             </div>
             
             <div class="project">
-                <img class="project-photo" src="images/olympics-project.png" alt="Project 1">
-                <div class="project-info">
+                <img class="project-photo slide-in-left" src="images/olympics-project.png" alt="Project 1">
+                <div class="project-info slide-in-right">
                     <h3>Adjusted Olympic Medals Table</h3>
                     <p>
                         This app scrapes data from the BBC Olympics Website and re-orders the countries in a fairer table, ascribing weighted points values to Gold, Silver, and Bronze Medals.
@@ -268,7 +268,30 @@
         </div>
     </section>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function checkAnimation() {
+                const sections = document.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-up');
+    
+                sections.forEach(section => {
+                    const sectionPosition = section.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.5;
+    
+                    if (sectionPosition < screenPosition) {
+                        section.classList.add('animated');
+                    } else {
+                        section.classList.remove('animated'); // Optional: remove animation if not in view
+                    }
+                });
+            }
+    
+            window.addEventListener('scroll', checkAnimation);
+            checkAnimation(); // Run on page load
+        });
+    </script>
+    
+    
+    
 </body>
 
 </html>

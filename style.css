@@ -62,6 +62,33 @@ body {
     color: limegreen; /* Change color on hover */
 }
 
+/* Base styles for elements */
+.slide-in-left,
+.slide-in-right,
+.slide-in-up {
+    opacity: 0; /* Start with invisible */
+    transform: translateY(20px); /* Adjust based on your animation direction */
+    transition: opacity 3s ease-out, transform 0.6s ease-out;
+}
+
+/* Animated class to trigger the transition */
+.animated.slide-in-left {
+    opacity: 2;
+    transform: translateX(0);
+}
+
+.animated.slide-in-right {
+    opacity: 2;
+    transform: translateX(0);
+}
+
+.animated.slide-in-up {
+    opacity: 2;
+    transform: translateY(0);
+}
+
+
+
 /* About Section styles */
 .about-section {
     display: flex;
@@ -165,6 +192,7 @@ body {
     border: 50px solid rgba(50, 205, 50, 0.3);
     text-shadow: 0 0 10px rgb(255, 255, 255);
     filter: drop-shadow(0 0 10px limegreen);
+    transition: transform 0.3s ease;
     transform: scale(1.05);
 }
 
