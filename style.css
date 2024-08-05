@@ -68,7 +68,7 @@ body {
 .slide-in-up {
     opacity: 0; /* Start with invisible */
     transform: translateY(20px); /* Adjust based on your animation direction */
-    transition: opacity 3s ease-out, transform 0.6s ease-out;
+    transition: opacity 2s ease-out, transform 0.6s ease-out;
 }
 
 /* Animated class to trigger the transition */
